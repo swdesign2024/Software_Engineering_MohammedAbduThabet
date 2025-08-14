@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}تفاصيل المدرس{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">تفاصيل المدرس: {{ teacher.FirstName }} {{ teacher.LastName }}</h1>
+<ul class="list-group">
+    <li class="list-group-item"><strong>الاسم:</strong> {{ teacher.FirstName }} {{ teacher.LastName }}</li>
+    <li class="list-group-item"><strong>العمر:</strong> {{ teacher.Age }}</li>
+    <li class="list-group-item"><strong>الجنس:</strong> {{ teacher.Gender }}</li>
+    <li class="list-group-item"><strong>المادة:</strong> {{ teacher.Subject }}</li>
+    <li class="list-group-item"><strong>الحالة:</strong> {{ teacher.Status }}</li>
+</ul>
+<a href="{% url 'teacher_list' %}" class="btn btn-secondary mt-3">العودة إلى قائمة المدرسين</a>
+{% endblock %}

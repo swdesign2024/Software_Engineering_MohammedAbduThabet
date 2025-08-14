@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}تفاصيل الطالب{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">تفاصيل الطالب: {{ student.FirstName }} {{ student.LastName }}</h1>
+<ul class="list-group">
+    <li class="list-group-item"><strong>الاسم:</strong> {{ student.FirstName }} {{ student.LastName }}</li>
+    <li class="list-group-item"><strong>العمر:</strong> {{ student.Age }}</li>
+    <li class="list-group-item"><strong>الجنس:</strong> {{ student.Gender }}</li>
+    <li class="list-group-item"><strong>الصف:</strong> {{ student.Level }}</li>
+    <li class="list-group-item"><strong>الحالة:</strong> {{ student.Status }}</li>
+</ul>
+<a href="{% url 'student_list' %}" class="btn btn-secondary mt-3">العودة إلى قائمة الطلاب</a>
+{% endblock %}

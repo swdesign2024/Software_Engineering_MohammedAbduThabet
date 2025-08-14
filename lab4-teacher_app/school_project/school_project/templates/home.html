@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}الصفحة الرئيسية{% endblock %}
+
+{% block content %}
+<div>
+  <div class="p-5 mb-4 bg-light rounded-3 text-center">
+    <h1 class="display-5 fw-bold">مرحباً بك في نظام إدارة المدرسة</h1>
+    <p class="fs-4">نظام متكامل لإدارة بيانات الطلاب والمدرسين.</p>
+    <a class="btn btn-primary btn-lg mx-2" href="{% url 'student_list' %}">إدارة الطلاب</a>
+    <a class="btn btn-secondary btn-lg mx-2" href="{% url 'teacher_list' %}">إدارة المدرسين</a>
+  </div>
+</div>
+{% endblock %}
